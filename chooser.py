@@ -7,6 +7,8 @@ class Multipliers:
         self.signup_time = signup_time
         self.getting_speed = getting_speed
 
+    def __str__(self):
+        return "" + str(self.books_number) + " " + str(self.signup_time) + " " + str(self.getting_speed)
 
 is_first = True
 
