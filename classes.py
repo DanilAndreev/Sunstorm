@@ -12,7 +12,7 @@ class Book:
 
 
 class Library:
-    def __init__(self, ID, books_num, signup_time, books_per_day, books):
+    def __init__(self, ID : int, books_num : int, signup_time : int, books_per_day : int, books):
         self.ID = ID
         self.books_num = books_num
         self.signup_time = signup_time
