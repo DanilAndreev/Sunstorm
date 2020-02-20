@@ -5,6 +5,12 @@ class Task:
         self.days = days
 
 
+class Book:
+    def __init__(self, ID, score):
+        self.ID = ID
+        self.score = score
+
+
 class Library:
     def __init__(self, ID, books_num, signup_time, books_per_day, books):
         self.ID = ID
@@ -12,4 +18,7 @@ class Library:
         self.signup_time = signup_time
         self.books_per_day = books_per_day
         self.books = books
+
+    def calc_books_score(self):
+        return sum([book.score for book in self.books])
 
