@@ -15,5 +15,5 @@ def parse_from(filename):
 
 
 if __name__ == "__main__":
-    libs = parse_from("a_example.txt")
-    print(libs[0].books)
+    libs = parse_from("datasets/a_example.txt")
+    print(libs[0].books_per_day)
