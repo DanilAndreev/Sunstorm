@@ -1,6 +1,3 @@
-import typing
-
-
 def unload_in(filename, libs_count, lib_ids_in_order, books_libs_will_send):
     with open(filename, "w") as fout:
         fout.writelines([str(libs_count) + "\n"] + [str(lib_ids_in_order[i]) + " " + str(len(books_libs_will_send[i]))
