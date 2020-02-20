@@ -30,7 +30,7 @@ def get_next_lib(libraries: list, chosen_libraries: list, multipliers_simple: Mu
         result = max(libraries,
                    key=lambda library: calc_priority(library.books_num, library.signup_time,
                                                      library.books_per_day, multipliers_simple) * multipliers_deep[0] +
-                    len(set([book for book in library.books for library in chosen_libraries]) ^ set(library.books))
+                    sum([x.score for x in set([book for book in library.books for library in chosen_libraries]) ^ set(library.books)])
                    )
         libraries.remove(result)
         return result
