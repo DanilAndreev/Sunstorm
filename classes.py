@@ -20,5 +20,5 @@ class Library:
         self.books = books
 
     def calc_books_score(self):
-        return sum([book.score for book in self.books])
+        return sum(book.score for book in self.books)
 
